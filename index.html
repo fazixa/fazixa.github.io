@@ -1,452 +1,608 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>Steve Portfolio</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="vendors/animate-css/animate.css">
-	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
-</head>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>Myth</title>
+		<meta name="author" content="Faezeh Shayesteh">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<body>
+		<style>
+			@font-face {
+			  font-family: 'Pier Sans';
+			  src: url('/fonts/pier-regular.otf') format('opentype');
+			  font-weight: normal;
+			  font-style: normal;
+			}
 
-	<!--================Header Menu Area =================-->
-	<header class="header_area">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
-							<li class="nav-item submenu dropdown">
-								<a class="nav-link" href="#">Portfolio</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portrfolio Details</a>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!--================Header Menu Area =================-->
+			body { margin: 0; }
+			body,
+			html {
+				font-family: "Pier Sans", sans-serif;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 
-	<!--================Home Banner Area =================-->
-	<section class="banner-area owl-carousel" id="home">
-		<div class="single_slide_banner slide_bg1">
-			<div class="container">
-				<div class="row fullscreen d-flex align-items-center">
-					<div class="banner-content col-lg-12 justify-content-center">
-						<h1>Faezeh Shayesteh</h1>
-						<h3>Personal portfolio Website</h3>
-						<a href="#" class="primary-btn">Hire Me</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="single_slide_banner slide_bg2">
-			<div class="container">
-				<div class="row fullscreen d-flex align-items-center">
-					<div class="banner-content col-lg-12 justify-content-center">
-						<h1>Faezeh Shayesteh</h1>
-						<h3>Personal portfolio Website</h3>
-						<a href="#" class="primary-btn">Hire Me</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="single_slide_banner slide_bg3">
-			<div class="container">
-				<div class="row fullscreen justify-content-endd-flex align-items-center">
-					<div class="banner-content col-lg-12 justify-content-center">
-						<h1>Faezeh Shayesteh</h1>
-						<h3>Personal portfolio Website</h3>
-						<a href="#" class="primary-btn">Hire Me</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Home Banner Area =================-->
+			.loading-mask {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				background: white;
+				color: #999;
+				font: Pier Sans;
+				opacity: 1;
+				visibility: visible;
+				transition: 0.25s ease all;
+				transition-delay: 0.15s;
+			}
+			.allow-motion-button {
+				opacity: 0;
+				visibility: hidden;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				position: absolute;
+				bottom: 20px;
+				width: 225px;
+				height: 50px;
+				border-radius: 25px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				background-color: white;	
+				box-shadow: 0 0 30px rgba(0,0,0,0.15);
+				overflow: hidden;
+				padding: 0 5px;
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				transition: 0.15s ease all;
+				font-family: sans-serif;
+			}
+			.allow-motion-button.visible {
+				visibility: visible;
+				opacity: 1;
+			}
+			.allow-motion-icon {
+				height: 40px;
+				width: 40px;
+				background-image: url('./gyroscope.png');
+				background-size: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.allow-motion-text {
+				color: #1FAD70;
+				padding-left: 5px;
+			}
 
-	<!--================ Start Portfolio Area =================-->
-	<section class="section_gap portfolio_area" id="work">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-6 text-center">
-					<div class="main-title">
-						<h1>Latest Works</h1>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may
-							see some for as low as $.17 each.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-10">
-					<div class="projects_fillter">
-						<ul class="filter list">
-							<li class="active" data-filter="*">All Categories</li>
-							<li data-filter=".brand">Branding</li>
-							<li data-filter=".work">Creative Work </li>
-							<li data-filter=".web">Web Design</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="projects_inner row grid">
-				<div class="grid-sizer col-sm-6 col-md-3 col-lg-3"></div>
-				<div class="col-lg-6 col-sm-6 col-sm-12 brand web grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="img/works/work1.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>2D Vinyl Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-sm-12 brand work grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="img/works/work2.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>2D Vinyl Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 work grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="img/works/work3.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>2D Vinyl Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-sm-6 brand work grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="img/works/work5.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>2D Vinyl Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-sm-6 brand web grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="img/works/work4.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>2D Vinyl Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-sm-6 brand work web grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="img/works/work8.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>2D Vinyl Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand work web grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="img/works/work6.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>2D Vinyl Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 brand work web grid-item">
-					<div class="projects_item">
-						<img class="img-fluid w-100" src="img/works/work7.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>2D Vinyl Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Portfolio Area =================-->
+			@media (prefers-color-scheme: dark) {
+				body,
+				.loading-mask {
+					background: #292933;
+				}
+			}
 
-	<!--================ Start About Area =================-->
-	<section class="about-area section_gap gray-bg">
-		<div class="container">
-			<div class="row align-items-center justify-content-between">
-				<div class="col-lg-5 about-left">
-					<img class="img-fluid" src="img/about-img.png" alt="">
-				</div>
-				<div class="col-lg-6 col-md-12 about-right">
-					<div class="main-title text-left">
-						<h1>about myselt</h1>
-					</div>
-					<div class="mb-50 wow fadeIn" data-wow-duration=".8s">
-						<p>
-							inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-							especially in the
-							workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate
-							behavior
-							is often laughed. inappropriate behavior is often laughed off as “boys will be boys,” women face higher.
-						</p>
-						<p>That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is
-							often
-							laughed.
-						</p>
-					</div>
-					<a href="#" class="primary-btn">More Info</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End About Area =================-->
+		</style>
+	</head>
+	<body>
+		<div class="loading-mask" id="loading">Loading...</div>
+		<div class="allow-motion-button" onclick="enableMotion()">
+			<div class="allow-motion-icon"></div>
+			<div class="allow-motion-text">Enable Motion Controls</div>
+		<div>
+		<script src="https://jaromvogel.com/projects/myth/js/three.js"></script>
+		<script src="https://jaromvogel.com/projects/myth/js/orbitcontrols.js"></script>
+		<script src="https://jaromvogel.com/projects/myth/js/CopyShader.js"></script>
+		<script src="https://jaromvogel.com/projects/myth/js/RGBShiftShader.js"></script>
+		<script src="https://jaromvogel.com/projects/myth/js/DotScreenShader.js"></script>
 
-	<!--================ Start Testimonial Area =================-->
-	<div class="section_gap testimonial_area">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-7 text-left">
-					<div class="active_testimonial owl-carousel" data-slider-id="1">
-						<!-- single testimonial -->
-						<div class="single_testimonial">
-							<div class="testimonial_head">
-								<img src="img/quote.png" alt="">
-								<h4>Fanny Spencer</h4>
-								<div class="review">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</div>
-							</div>
-							<div class="testimonial_content">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about
-									it, you travel across her face</p>
-							</div>
-						</div>
+		<script src="https://jaromvogel.com/projects/myth/js/EffectComposer.js"></script>
+		<script src="https://jaromvogel.com/projects/myth/js/RenderPass.js"></script>
+		<script src="https://jaromvogel.com/projects/myth/js/MaskPass.js"></script>
+		<script src="https://jaromvogel.com/projects/myth/js/ShaderPass.js"></script>
+		<script src="https://jaromvogel.com/projects/myth/js/tween.js"></script>
+		<script src="quaternion/quaternion.min.js"></script>
 
-						<div class="single_testimonial">
-							<div class="testimonial_head">
-								<img src="img/quote.png" alt="">
-								<h4>Fanny Spencer</h4>
-								<div class="review">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</div>
-							</div>
-							<div class="testimonial_content">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about
-									it, you travel across her face</p>
-							</div>
-						</div>
+		<script id="vertexShader" type="x-shader/x-vertex">
+			
+			varying vec2 vUv;
 
-						<div class="single_testimonial">
-							<div class="testimonial_head">
-								<img src="img/quote.png" alt="">
-								<h4>Fanny Spencer</h4>
-								<div class="review">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</div>
-							</div>
-							<div class="testimonial_content">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about
-									it, you travel across her face</p>
-							</div>
-						</div>
+			void main() {
 
-						<div class="single_testimonial">
-							<div class="testimonial_head">
-								<img src="img/quote.png" alt="">
-								<h4>Fanny Spencer</h4>
-								<div class="review">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</div>
-							</div>
-							<div class="testimonial_content">
-								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about
-									it, you travel across her face</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 offset-lg-1">
-					<div class="testimonial_logos">
-						<div class="top_logos">
-							<img src="img/brands/logo1.png" alt="">
-							<img src="img/brands/logo2.png" alt="">
-						</div>
-						<div class="mid_logo">
-							<img src="img/brands/logo3.png" alt="">
-						</div>
-						<div class="bottom_logos jus">
-							<img src="img/brands/logo4.png" alt="">
-							<img src="img/brands/logo5.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--================ End Testimonial Area =================-->
+				vUv = uv;
 
-	<!--================ Start Newsletter Area =================-->
-	<section class="section_gap newsletter-area">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-6 text-center">
-					<div class="main-title">
-						<h1>Join Our Newsletter</h1>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may
-							see some for as low as $.17 each.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row newsletter_form justify-content-center">
-				<div class="col-lg-6 col-md-6 col-sm-6">
-					<div class="d-flex flex-row" id="mc_embed_signup">
-						<form class="w-100" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-						 method="get">
-							<div class="navbar-form">
-								<div class="input-group add-on">
-									<input class="form-control" name="EMAIL" placeholder="Your email address" onfocus="this.placeholder = ''"
-									 onblur="this.placeholder = 'Your email address'" required="" type="email">
-									<div style="position: absolute; left: -5000px;">
-										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-									</div>
-									<div class="input-group-btn">
-										<button class="genric-btn text-uppercase">
-											Subscribe
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="info mt-20"></div>
-						</form>
+				gl_Position = vec4( position, 1.0 );
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Newsletter Area =================-->
+			}
 
-	<!--================ Start Footer Area =================-->
-	<footer class="footer_area section_gap">
-		<div class="container">
-			<div class="row footer_inner justify-content-center">
-				<div class="col-lg-6 text-center">
-					<aside class="f_widget social_widget">
-						<div class="f_logo">
-							<img src="img/logo.png" alt="">
-						</div>
-						<div class="f_title">
-							<h4>Follow Me</h4>
-						</div>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-							<li><a href="#"><i class="fa fa-behance"></i></a></li>
-						</ul>
-					</aside>
-					<div class="copyright">
-						<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!--================End Footer Area =================-->
+		</script>
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="vendors/isotope/isotope-min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/mail-script.js"></script>
-	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-	<script src="js/gmaps.min.js"></script>
-	<script src="js/theme.js"></script>
-</body>
+		<script id="fragmentShader" type="x-shader/x-fragment">
+			
+			uniform sampler2D tDiffuse;
+			uniform float amount; // This is passed in from the JS file, but will be the same for all pixels
+			uniform float cursorx;
+			uniform float cursory;
+			varying vec2 vUv; // This is the x and y coordinates of the specific pixel
 
+			void main() {
+				vec4 color = texture2D(tDiffuse, vUv);
+				
+				// gl_FragColor = color * amount;
+
+				vec2 p = vUv;
+
+				if (p.y < 0.5) p.y = 1.0 - p.y;
+				vec4 mirror = texture2D(tDiffuse, p);
+
+				vec2 off = vUv;
+				off.x = off.x + 0.01;
+				off.y = off.y + 0.01;
+				vec4 offset = texture2D(tDiffuse, off);
+
+				vec2 distortion = vUv;
+				//if (distortion.x < cursorx) distortion.x = distortion.x * 0.9;
+				//if (distortion.y < cursory) distortion.y = distortion.y * 0.9;
+				if (
+					distortion.x < cursorx + 0.1 &&
+					distortion.x > cursorx - 0.1 &&
+					distortion.y < cursory + 0.1 &&
+					distortion.y > cursory - 0.1)
+				{
+					distortion.x = (distortion.x - 0.25);
+					distortion.y = (distortion.y - 0.25);
+				}
+
+				vec4 mouse_distortion = texture2D(tDiffuse, distortion);
+
+
+
+				vec2 temp_uv = vUv;
+				temp_uv = temp_uv * 2.0 - 1.0;
+				float distort = 2.0;
+				float r = temp_uv.x * temp_uv.x + temp_uv.y * temp_uv.y;
+				temp_uv *= 0.5 + distort * r * r * r * distort * 5.5 + distort;
+
+				temp_uv = 0.5 * (temp_uv * 0.5 + 1.0);
+
+				vec4 barrel_distortion = texture2D(tDiffuse, temp_uv);
+
+
+				// gl_FragColor = vec4(
+				//	offset.r * (vUv.x + vUv.y),
+				//	color.g * cursorx,
+				//	offset.b * cursory,
+				//	color.a
+				//);
+
+				gl_FragColor = barrel_distortion;
+			}
+
+		</script>
+
+		<script id="vertexShader2" type="x-shader/x-fragment">
+
+            uniform float strength;          // s: 0 = perspective, 1 = stereographic
+            uniform float height;            // h: tan(verticalFOVInRadians / 2)
+            uniform float aspectRatio;       // a: screenWidth / screenHeight
+            uniform float cylindricalRatio;  // c: cylindrical distortion ratio. 1 = spherical
+
+            varying vec3 vUV;                // output to interpolate over screen
+            varying vec2 vUVDot;             // output to interpolate over screen
+
+            void main() {
+                gl_Position = projectionMatrix * (modelViewMatrix * vec4(position, 1.0));
+                float scaledHeight = strength * height;
+                float cylAspectRatio = aspectRatio * cylindricalRatio;
+                float aspectDiagSq = aspectRatio * aspectRatio + 1.0;
+                float diagSq = scaledHeight * scaledHeight * aspectDiagSq;
+                vec2 signedUV = (2.0 * uv + vec2(-1.0, -1.0));
+                float z = 0.5 * sqrt(diagSq + 1.0) + 0.5;
+                float ny = (z - 1.0) / (cylAspectRatio * cylAspectRatio + 1.0);
+                vUVDot = sqrt(ny) * vec2(cylAspectRatio, 1.0) * signedUV;
+                vUV = vec3(0.5, 0.5, 1.0) * z + vec3(-0.5, -0.5, 0.0);
+                vUV.xy += uv;
+            }
+
+		</script>
+
+
+		<script id="fragmentShader2" type="x-shader/x-fragment">
+			
+            uniform sampler2D tDiffuse;      // sampler of rendered scene's render target
+            varying vec3 vUV;                // interpolated vertex output data
+            varying vec2 vUVDot;             // interpolated vertex output data
+
+            void main() {
+                vec3 uv = dot(vUVDot, vUVDot) * vec3(-0.5, -0.5, -1.0) + vUV;
+                gl_FragColor = texture2DProj(tDiffuse, uv);
+            }
+
+		</script>
+
+		<script>
+
+			var layer_count = 12;
+			var load_counter = 0;
+
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera(
+				45,
+				window.innerWidth / window.innerHeight,
+				0.1,
+				2000
+			);
+
+			camera.position.z = 250;
+
+			camera.updateProjectionMatrix();
+
+			var q = {
+				x: null,
+				y: null,
+				z: null,
+				w: null
+			};
+			var initial_angles = {
+				alpha: null,
+				beta: null,
+				gamma: null
+			};
+			
+
+			var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+			renderer.setPixelRatio(window.devicePixelRatio);
+			renderer.gammaOutput = true;
+			renderer.gammaFactor = 2.2
+			renderer.setSize( window.innerWidth, window.innerHeight );
+
+			//// Shader Test ////
+
+			var uniforms = {
+				"tDiffuse":   		{ type: "t", value: null },
+				"amount":     		{ type: "f", value: 1.0 },
+				"cursorx":    		{ type: "f", value: 0.0 },
+				"cursory":    		{ type: "f", value: 0.0 },
+	            "strength":         { type: "f", value: 0 },
+	            "height":           { type: "f", value: 1 },
+	            "aspectRatio":      { type: "f", value: 1 },
+	            "cylindricalRatio": { type: "f", value: 1 }
+			}
+
+			var testShader = new THREE.ShaderMaterial({
+				uniforms: uniforms,
+				vertexShader: document.getElementById( 'vertexShader2' ).textContent,
+				fragmentShader: document.getElementById( 'fragmentShader2' ).textContent
+			});
+
+
+			var composer = new THREE.EffectComposer(renderer);
+			composer.addPass( new THREE.RenderPass( scene, camera ));
+
+			var effect = new THREE.ShaderPass( testShader );
+			var horizontalFOV = 45;
+			var strength = 2.0;
+			var cylindricalRatio = 2;
+			var height = Math.tan(THREE.Math.degToRad(horizontalFOV) / 2) / camera.aspect;
+
+			camera.fov = Math.atan(height) * 2 * 180 / 3.1415926535;
+			camera.updateProjectionMatrix();
+
+			effect.uniforms[ "strength" ].value = strength;
+			effect.uniforms[ "height" ].value = height;
+			effect.uniforms[ "aspectRatio" ].value = camera.aspect;
+			effect.uniforms[ "cylindricalRatio" ].value = cylindricalRatio;
+			composer.addPass( effect );
+			effect.renderToScreen = true;
+
+			// var effect = new THREE.ShaderPass( THREE.DotScreenShader );
+			// effect.uniforms[ 'scale' ].value = 4;
+			// composer.addPass( effect );
+
+			// var effect = new THREE.ShaderPass( THREE.RGBShiftShader );
+			// effect.uniforms[ 'amount' ].value = 0.0015;
+			// composer.addPass( effect );
+
+
+
+			//// End Shader Test ////
+
+			renderer.setClearColor( 0xfef4e1, 1);
+			document.body.appendChild( renderer.domElement );
+
+			var controls = new THREE.OrbitControls( camera, renderer.domElement );
+			controls.enablePan = true;
+			controls.enableZoom = false; 
+			controls.panSpeed = 0.05;
+			controls.screenSpacePanning = true;
+			controls.enableDamping = true;
+			controls.minPolarAngle = (Math.PI / 2) - 0.4;
+			controls.maxPolarAngle = (Math.PI / 2) + 0.4;
+			controls.minAzimuthAngle = -Math.PI / 8;
+			controls.maxAzimuthAngle = Math.PI / 8;
+			controls.dampingFactor = 0.05;
+			controls.rotateSpeed = 0.02;
+
+			controls.saveState();
+
+			// save current camera and controls to reset on mouseup / touchend
+			var camera_position = camera.position.clone();
+
+			var counter = 1;
+			var current_frame = 1;
+
+			var animated_layers = [];
+
+			var group = new THREE.Group();
+
+
+			var imagesize = {x: 140, y: 140};
+
+			addLayer("https://jaromvogel.com/projects/myth/images/background.png", {x: 0, y: 0, z: -40}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/clouds_1.png", {x: 0, y: 0, z: -35}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/clouds_2.png", {x: 0, y: 0, z: -30}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/character.png", {x: 0, y: 0, z: -25}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/rocks.png", {x: 0, y: -0.5, z: -22.5}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/water_cropped.png", {x: 0, y: -49, z: -14}, {x: -0.35, y: 0, z: 0}, 1, {x: 140, y: (.293 * 140) }, 1, 2, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/sailboat.png", {x: 0, y: 0, z: -22}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 3, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/ship_1.png", {x: 0, y: 0, z: -18}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 3, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/ship_2.png", {x: 0, y: 0, z: -14}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 3, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/foreground.png", {x: 0.75, y: 0, z: -5}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 3, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/mask_large.png", {x: 0, y: 0, z: 0}, {x: -0.2, y: 0, z: 0}, 0.9, {x: 280, y: 280}, 1, 4, THREE.NormalBlending, false);
+			addLayer("https://jaromvogel.com/projects/myth/images/seagull_front.png", {x: 0, y: 0, z: 100}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 5, THREE.NormalBlending, false);
+
+
+/*
+			var backdrop_geometry = new THREE.PlaneGeometry(26, 14.943 * 2.6);
+			var backdrop_material = new THREE.MeshBasicMaterial({
+				color: 0x292933,
+				clippingPlanes: [clip_layer],
+				transparent: true
+			});
+			var backdrop_layer = new THREE.Mesh( backdrop_geometry, backdrop_material );
+			backdrop_layer.position.z = -5;
+			backdrop_layer.renderOrder = 2;
+			group.add( backdrop_layer );			
+*/
+
+			scene.add( group );
+
+			group.rotation.x = 0.1;
+			controls.update();
+			
+			function animate() {
+				requestAnimationFrame( animate );
+				TWEEN.update();
+				controls.update();
+				
+				var new_frame = Math.ceil(counter / 15);
+				if (new_frame !== current_frame) {
+					var offset = (new_frame - 1) / 5;
+					
+					// change position for animated layers
+					animated_layers.forEach(function(layer, index) {
+						layer.material.map.offset.x = offset;
+					});
+					
+					current_frame += 1;
+					if (current_frame > 5) {
+						current_frame = 1;
+					}
+
+				}
+				
+				counter += 1;
+				
+				if (counter > 75) {
+					counter = 1;
+				}
+
+				// renderer.render( scene, camera );
+				composer.render();
+			}
+			animate();
+
+			function addLayer(layer_name, position, rotation, scale, size, opacity, render_order, blendMode, animation) {
+				var geometry = new THREE.PlaneGeometry (size.x, size.y);
+				var texture = new THREE.TextureLoader().load( layer_name, function() {
+					load_counter += 1;
+					if (load_counter >= layer_count) {
+						var loading_mask = document.getElementById('loading');
+						loading_mask.style.opacity = 0;
+						loading_mask.style.visibility = 'hidden';
+					}
+				});
+				texture.encoding = THREE.sRGBEncoding;
+				texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+				var material = new THREE.MeshBasicMaterial({
+					map: texture,
+					transparent: true,
+					opacity: opacity,
+					blending: blendMode,
+					depthWrite: false,
+					depthTest: false
+				})
+				material.map.minFilter = THREE.LinearFilter;
+
+				var layer = new THREE.Mesh( geometry, material );
+				if (animation === true) {
+					layer.material.map.wrapS = THREE.RepeatWrapping;
+					layer.material.map.repeat.set(0.2, 1);
+				}
+				layer.material.wrapS = THREE.RepeatWrapping;
+				layer.material.wrapT = THREE.RepeatWrapping;
+				layer.position.z = position.z;
+				layer.position.x = position.x;
+				layer.position.y = position.y;
+				layer.scale.x = scale;
+				layer.scale.y = scale;
+				layer.rotation.x = rotation.x;
+				layer.rotation.y = rotation.y;
+				layer.rotation.z = rotation.z;
+				layer.renderOrder = render_order;
+				if (animation) {
+					animated_layers.push(layer);
+				}
+				group.add( layer );
+			}
+
+			// var rad = Math.PI / 180;
+
+			var motion_button = document.querySelector('.allow-motion-button');
+
+			// window.addEventListener("deviceorientation", function(event) {
+
+			// 	motion_button.classList.remove('visible');
+
+			// 	if (initial_angles.alpha === null) {
+			// 		initial_angles.alpha = event.alpha;
+			// 		initial_angles.beta = event.beta;
+			// 		initial_angles.gamma = event.gamma;
+			// 	}
+			// 	q = Quaternion.fromEuler(
+			// 		(event.alpha - initial_angles.alpha) * rad,
+			// 		(event.beta - initial_angles.beta) * rad,
+			// 		(event.gamma - initial_angles.gamma) * rad,
+			// 		'ZXY');
+				
+			// 	scene.quaternion.x = q.x;
+			// 	scene.quaternion.y = q.y;
+			// 	//scene.quaternion.z = q.z;
+			// 	scene.quaternion.w = q.w;
+				
+			// 	if (window.orientation === 90) {
+			// 		scene.quaternion.x = -q.y;
+			// 		scene.quaternion.y = q.x;
+			// 	} else if (window.orientation === -90) {
+			// 		scene.quaternion.x = q.y;
+			// 		scene.quaternion.y = -q.x;
+			// 	} else if (window.orientation === 180) {
+			// 		scene.quaternion.x = -q.x;
+			// 		scene.quaternion.y = -q.y;
+			// 	}
+			 	
+			// }, true);
+
+		    var alpha = 0;
+		    var beta = 0;
+		    var total_x = 0;
+		    var total_y = 0;
+		    var max_offset = 2000;
+
+		    window.addEventListener("devicemotion", function(e) {
+		        gyroscope = true;
+		        motion_button.classList.remove('visible');
+
+		        alpha = e.rotationRate.alpha;
+		        beta = e.rotationRate.beta;
+		        
+		        total_x += beta;
+		        total_y += alpha;
+
+		        if (Math.abs(total_x) > max_offset) {
+		            total_x = max_offset * Math.sign(total_x);
+		        }
+		        if (Math.abs(total_y) > max_offset) {
+		            total_y = max_offset * Math.sign(total_y);
+		        }
+		        
+		        var x_offset = -total_x / 3500;
+		        var y_offset = total_y / 3500;
+
+	            scene.rotation.x = x_offset;
+	            scene.rotation.y = y_offset;
+
+	            if (window.orientation === 90) {
+	                scene.rotation.x = x_offset;
+	                scene.rotation.y = y_offset;
+	            } else if (window.orientation === -90) {
+	                scene.rotation.x = -x_offset;
+	                scene.rotation.y = -y_offset;
+	            } else if (window.orientation === 180) {
+	                scene.rotation.x = -y_offset;
+	                scene.rotation.y = x_offset;
+	            } else if (window.orientation === 0) {
+	                scene.rotation.x = y_offset;
+	                scene.rotation.y = -x_offset;
+	            }
+		    });
+
+			function snapBack() {
+				controls.enableDamping = false;
+				TWEEN.removeAll();
+				var tween = new TWEEN.Tween(camera.position).to(camera_position, 200).easing(TWEEN.Easing.Back.Out).start();
+			}
+
+			window.addEventListener('mousedown', function(event) {
+				controls.enableDamping = true;
+			});
+
+			window.addEventListener('touchstart', function(event) {
+				controls.enableDamping = true;
+			});
+
+			var scale = 1;
+
+			window.addEventListener('gesturechange', function(event) {
+				// zoom
+				var new_scale = scale * event.scale;
+				camera.zoom = new_scale;
+
+				camera.updateProjectionMatrix();
+			});
+
+			window.addEventListener('gestureend', function(event) {
+				scale = scale * event.scale;
+			});
+
+			window.addEventListener('mouseup', function(event) {
+				snapBack();
+			});
+
+			window.addEventListener('touchend', function(event) {
+				snapBack();
+			});
+
+			window.addEventListener('orientationchange', function(event) {
+				// initial_angles.alpha = null;
+				// initial_angles.beta = null;
+				// initial_angles.gamma = null;
+				total_x = 0;
+				total_y = 0;
+				setTimeout(function () {
+					resizeCanvas();				
+				}, 150);
+			});
+
+			window.addEventListener('mousemove', function(event) {
+				effect.uniforms[ 'cursorx' ].value = event.offsetX / window.innerWidth;
+				effect.uniforms[ 'cursory' ].value = 1.0 - (event.offsetY / window.innerHeight);
+			});
+
+			window.addEventListener('resize', function() {
+				// resizeCanvas(); // weird zoom in bug on mobile safari?				
+			});
+
+			function resizeCanvas() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+
+			if (window.DeviceOrientationEvent && DeviceOrientationEvent.requestPermission) {
+				motion_button.classList.add('visible');
+			}
+
+			function enableMotion() {
+				DeviceOrientationEvent.requestPermission();
+				motion_button.classList.remove('visible');
+			}
+		</script>
+	</body>
 </html>

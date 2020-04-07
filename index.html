@@ -100,13 +100,13 @@
 		<script src="js/orbitcontrols.js"></script>
 		<script src="js/CopyShader.js"></script>
 		<script src="js/RGBShiftShader.js"></script>
-		<script src="https://jaromvogel.com/projects/myth/js/DotScreenShader.js"></script>
+		<script src="js/DotScreenShader.js"></script>
 
-		<script src="https://jaromvogel.com/projects/myth/js/EffectComposer.js"></script>
-		<script src="https://jaromvogel.com/projects/myth/js/RenderPass.js"></script>
-		<script src="https://jaromvogel.com/projects/myth/js/MaskPass.js"></script>
-		<script src="https://jaromvogel.com/projects/myth/js/ShaderPass.js"></script>
-		<script src="https://jaromvogel.com/projects/myth/js/tween.js"></script>
+		<script src="js/EffectComposer.js"></script>
+		<script src="js/RenderPass.js"></script>
+		<script src="js/MaskPass.js"></script>
+		<script src="js/ShaderPass.js"></script>
+		<script src="js/tween.js"></script>
 		<script src="js/quaternion.min.js"></script>
 
 		<script id="vertexShader" type="x-shader/x-vertex">
@@ -345,18 +345,18 @@
 			var imagesize = {x: 140, y: 140};
 
 			addLayer("img/bg.png", {x: 0, y: 0, z: -40}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
-			addLayer("https://jaromvogel.com/projects/myth/images/clouds_1.png", {x: 0, y: 0, z: -35}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
-			addLayer("https://jaromvogel.com/projects/myth/images/clouds_2.png", {x: 0, y: 0, z: -30}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
-			addLayer("https://jaromvogel.com/projects/myth/images/character.png", {x: 0, y: 0, z: -25}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
+			//addLayer("https://jaromvogel.com/projects/myth/images/clouds_1.png", {x: 0, y: 0, z: -35}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
+			//addLayer("https://jaromvogel.com/projects/myth/images/clouds_2.png", {x: 0, y: 0, z: -30}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
+			//addLayer("https://jaromvogel.com/projects/myth/images/character.png", {x: 0, y: 0, z: -25}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
 			addLayer("img/rock.png", {x: 0, y: -0.5, z: -22.5}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
-			addLayer("https://jaromvogel.com/projects/myth/images/water_cropped.png", {x: 0, y: -49, z: -14}, {x: -0.35, y: 0, z: 0}, 1, {x: 140, y: (.293 * 140) }, 1, 2, THREE.NormalBlending, false);
+			//addLayer("https://jaromvogel.com/projects/myth/images/water_cropped.png", {x: 0, y: -49, z: -14}, {x: -0.35, y: 0, z: 0}, 1, {x: 140, y: (.293 * 140) }, 1, 2, THREE.NormalBlending, false);
 			addLayer("img/character1.png", {x: 0, y: 0, z: -22}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 1, THREE.NormalBlending, false);
-			addLayer("https://jaromvogel.com/projects/myth/images/ship_1.png", {x: 0, y: 0, z: -18}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 3, THREE.NormalBlending, false);
+			/*addLayer("https://jaromvogel.com/projects/myth/images/ship_1.png", {x: 0, y: 0, z: -18}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 3, THREE.NormalBlending, false);
 			addLayer("https://jaromvogel.com/projects/myth/images/ship_2.png", {x: 0, y: 0, z: -14}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 3, THREE.NormalBlending, false);
 			addLayer("https://jaromvogel.com/projects/myth/images/foreground.png", {x: 0.75, y: 0, z: -5}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 3, THREE.NormalBlending, false);
 			addLayer("https://jaromvogel.com/projects/myth/images/mask_large.png", {x: 0, y: 0, z: 0}, {x: -0.2, y: 0, z: 0}, 0.9, {x: 280, y: 280}, 1, 4, THREE.NormalBlending, false);
 			addLayer("https://jaromvogel.com/projects/myth/images/seagull_front.png", {x: 0, y: 0, z: 10}, {x: 0, y: 0, z: 0}, 1, imagesize, 1, 5, THREE.NormalBlending, false);
-
+			*/
 
 /*
 			var backdrop_geometry = new THREE.PlaneGeometry(26, 14.943 * 2.6);

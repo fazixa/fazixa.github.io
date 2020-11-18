@@ -54,179 +54,40 @@ body{
 nav {
   background: #1f2532;
   border: 1px solid transparent;
+  margin-top: 10px;
 }
 
 
 .navbar.navbar-default .navbar-collapse {
   border: 1px solid transparent;
 }
-/* .navigation {
-    transition: .3s all;
-    background: #1f2532;
-  } */
-/*   
-  .navigation .navbar-nav > li.active a {
-    color: #fff;
-  }
-  
-  .navigation .navbar-nav > li > a {
-    color: #707d8f;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 26px;
-    padding: 20px 15px !important;
-    transition: .2s ease-in-out 0s;
-  }
-  
-  @media (max-width: 480px) {
-    .navigation .navbar-nav > li > a {
-      padding: 8px 0 !important;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .navigation .navbar-nav > li > a {
-      padding: 8px 0 !important;
-    }
-  }
-  
-  .navigation .navbar-nav > li > a:hover, .navigation .navbar-nav > li > a:active, .navigation .navbar-nav > li > a:focus {
-    background: none;
-    color: #f0326b;
-  }
-  
-  .navigation .navbar-toggler {
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .navigation .nav .open > a {
-    background: none;
-  }
-  
-  .navigation .dropdown {
-    padding: 0;
-  }
-  
-  .navigation .dropdown:hover .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  
-  .navigation .dropdown .dropdown-item {
-    padding: 8px 15px;
-    color: #fff;
-    font-size: 13px;
-  }
-  
-  .navigation .dropdown .dropdown-item:hover {
-    background: transparent;
-    color: #f0326b;
-  }
-  
-  .navigation .dropdown .dropdown-menu {
-    border-radius: 0;
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    background-color: #000;
-    display: block;
-    opacity: 0;
-    transition: .3s ease;
-    visibility: hidden;
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    transform-origin: top;
-  }
-  
-  @media (max-width: 992px) {
-    .navigation .dropdown .dropdown-menu {
-      display: none;
-      opacity: 1;
-      visibility: visible;
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
-      -webkit-transform-origin: unset;
-              transform-origin: unset;
-    }
-  }
-  
-  .navigation .dropdown .dropdown-menu.show {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  
-  @media (max-width: 992px) {
-    .navigation .dropdown .dropdown-menu.show {
-      display: block;
-    }
-  }
-  
-  .navbar-brand {
-    height: auto;
-    padding: 8px 0;
-  }
-  
-  .navbar-brand h1 {
-    margin: 0;
-  } */
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
   .name{
       color: #f8cdcd;
-      font-size: 47px;
+      font-size: 40px;
+      font-weight: 500;
+      font-family: 'Nunito', sans-serif;
   }
   
-  .hero-area {
-    padding: 150px 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #1f2532;
+  .cv{
+    color: #ffffff;
+      font-size: 25px;
+      font-family: 'Nunito', sans-serif;
+  
+  }
+
+  .cv:hover{
+    color: #ffe1e1;
   }
   
-  @media (max-width: 480px) {
-    .hero-area {
-      padding: 80px 0;
-    }
-  }
-  
-  .hero-area .block {
-    color: #fff;
-    padding-left: 30px;
-  }
-  
-  @media (max-width: 480px) {
-    .hero-area .block {
-      padding: 0;
-    }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
 .hero-area {
-    padding: 150px 0;
+    padding: 100px 0;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #1f2532;
+    /* background: #1f2532; */
   }
 
   @media (max-width: 480px) {
@@ -238,6 +99,7 @@ nav {
   .hero-area .block {
     color: #fff;
     padding-left: 30px;
+    font-family: 'Nunito', sans-serif;
   }
   
   @media (max-width: 480px) {
@@ -254,6 +116,7 @@ nav {
   .hero-area .block p {
     color: #707d8f;
     margin-bottom: 20px;
+    
   }
   
   .hero-area .block .list-inline {
@@ -286,6 +149,9 @@ nav {
     /* z-index: 1; */
     position: relative;
 }
+.goodday{
+  font-family: 'Nunito', sans-serif;
+}
 
 @keyframes wave {
     0%, 100% {
@@ -297,4 +163,7 @@ nav {
 }
 
 
-
+body{
+  background: #1f2532;
+  background-color: #1f2532;
+}

@@ -71,8 +71,11 @@ nav {
   }
   
   .cv{
-    color: #ffffff;
-      font-size: 25px;
+    background-color: #f8cdcd;
+    padding:10px;
+    border-radius: 5px;
+    color: #17164b;
+      font-size: 30px;
       font-family: 'Nunito', sans-serif;
   
   }

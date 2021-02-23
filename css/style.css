@@ -143,6 +143,13 @@ nav {
     position: absolute;
 }
 
+.is-content2{
+  /* z-index: 2; */
+  position: absolute;
+  border-radius: 20px;
+  opacity: 90%;
+  
+}
 .shape:nth-of-type(1) {
     width: 450px;
     height: 450px;
@@ -152,17 +159,49 @@ nav {
     /* z-index: 1; */
     position: relative;
 }
+
+
+.shape2:nth-of-type(1) {
+  width: 400px;
+  height: 400px;
+  /* background: linear-gradient(64deg, #f34868 23%, #f24768 23%,#9e00ec 80% ); */
+  background: #f8cdcd;
+  animation: wave 7s ease-in-out infinite;
+  /* z-index: 1; */
+  position: relative;
+}
+
+.shape3:nth-of-type(1) {
+  width: 400px;
+  height: 400px;
+  /* background: linear-gradient(64deg, #f34868 23%, #f24768 23%,#9e00ec 80% ); */
+  background: #f8cdcd;
+  animation: wave3 9s ease-in-out infinite;
+
+  /* z-index: 1; */
+  position: relative;
+}
 .goodday{
   font-family: 'Nunito', sans-serif;
 }
 
 @keyframes wave {
     0%, 100% {
-        border-radius: 66% 34% 37% 63% / 57% 31% 69% 43%;
+        border-radius: 34% 66% 63% 37% / 31% 57% 43% 69%;
     }
     50%{
         border-radius: 26% 74% 51% 49% / 22% 53% 47% 78%;
     }
+}
+
+
+@keyframes wave3 {
+  0%, 100% {
+      border-radius: 66% 34% 37% 63% / 57% 31% 69% 43%;
+  }
+  50%{
+      border-radius: 74% 26% 49% 51% / 53% 22% 78% 47%;
+  }
 }
 
 

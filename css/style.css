@@ -1,17 +1,19 @@
-body{
-    background: #1f2532;
-    background-color: #1f2532;
-}
-.bg{
+body {
   background: #1f2532;
-    background-color: #1f2532;
+  background-color: #1f2532;
 }
+
+.bg {
+  background: #1f2532;
+  background-color: #1f2532;
+}
+
 .font_eqq6lzduh,
 [data-font="font_eqq6lzduh"],
 [data-font="font_eqq6lzduh"] li a {
-    font-family: "Pacifico", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Pacifico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .font_euzjg2g73,
@@ -19,34 +21,36 @@ body{
 [data-font="font_euzjg2g73"] li a,
 #content-holder p,
 #content-holder li {
-    font-family: "open sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "open sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .font_z2t2clah4,
 [data-font="font_z2t2clah4"],
 [data-font="font_z2t2clah4"] li a {
-    font-family: "Avenir Next", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .font_oog0jvw7v,
 [data-font="font_oog0jvw7v"],
 [data-font="font_oog0jvw7v"] li a {
-    font-family: "Avenir Next", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 
 .hm-gradient {
   background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
+
 .navbar .dropdown-menu a:hover {
   color: #616161 !important;
 }
+
 .darken-grey-text {
   color: #2E2E2E;
 }
@@ -61,103 +65,137 @@ nav {
 .navbar.navbar-default .navbar-collapse {
   border: 1px solid transparent;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
-  .name{
-      color: #f8cdcd;
-      font-size: 40px;
-      font-weight: 500;
-      font-family: 'Nunito', sans-serif;
-  }
-  
-  .cv{
-    background-color: #f8cdcd;
-    padding:10px;
-    border-radius: 5px;
-    color: #17164b;
-      font-size: 30px;
-      font-family: 'Nunito', sans-serif;
-  
-  }
 
-  .cv:hover{
-    color: #ffe1e1;
-  }
-  
+.name {
+  color: #f8cdcd;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+}
+
+.cv {
+  background-color: #f8cdcd;
+  padding: 10px;
+  border-radius: 5px;
+  color: #17164b;
+  font-size: 30px;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.cv:hover {
+  color: #ffe1e1;
+}
+
 .hero-area {
-    padding: 100px 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background: #1f2532; */
-  }
+  padding: 100px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #1f2532; */
+}
 
-  @media (max-width: 480px) {
-    .hero-area {
-      padding: 80px 0;
-    }
+@media (max-width: 480px) {
+  .hero-area {
+    padding: 80px 0;
   }
-  
+}
+
+.hero-area .block {
+  color: #fff;
+  padding-left: 30px;
+  font-family: 'Nunito', sans-serif;
+}
+
+@media (max-width: 480px) {
   .hero-area .block {
-    color: #fff;
-    padding-left: 30px;
-    font-family: 'Nunito', sans-serif;
+    padding: 0;
   }
-  
-  @media (max-width: 480px) {
-    .hero-area .block {
-      padding: 0;
-    }
-  }
-
-  .hero-area .block h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .hero-area .block p {
-    color: #c9cacc;
-    margin-bottom: 20px;
-    
-  }
-  
-  .hero-area .block .list-inline {
-    margin-top: 50px;
-  }
-  
-  .hero-area .block .btn-main, .hero-area .block .btn-main-sm {
-    margin-right: 8px;
-  }
-  
-
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    /* height: 100vh; */
-}
-.is-content1{
-    /* z-index: 2; */
-    position: absolute;
 }
 
-.is-content2{
+.hero-area .block h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-area .block p {
+  color: #c9cacc;
+  margin-bottom: 20px;
+
+}
+
+.hero-area .block .list-inline {
+  margin-top: 50px;
+}
+
+.hero-area .block .btn-main,
+.hero-area .block .btn-main-sm {
+  margin-right: 8px;
+}
+
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.is-content1 {
+  /* z-index: 2; */
+  position: absolute;
+}
+
+.arrow-link {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  font-weight: 700;
+  display: inline-block;
+  background-color: transparent;
+  white-space: nowrap;
+}
+
+.arrow-link:after {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  position: relative;
+  bottom: 2px;
+  margin-left: 15px;
+  content: '';
+  background: url(../img/arrow.png) no-repeat center;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.arrow-link:hover:after {
+  -webkit-transform: translateX(7px);
+  transform: translateX(7px)
+}
+
+.is-content2 {
   /* z-index: 2; */
   position: absolute;
   border-radius: 20px;
   opacity: 90%;
-  
+
 }
+
 .shape:nth-of-type(1) {
-    width: 450px;
-    height: 450px;
-    /* background: linear-gradient(64deg, #f34868 23%, #f24768 23%,#9e00ec 80% ); */
-    background: #f8cdcd;
-    animation: wave 8s ease-in-out infinite;
-    /* z-index: 1; */
-    position: relative;
+  width: 450px;
+  height: 450px;
+  /* background: linear-gradient(64deg, #f34868 23%, #f24768 23%,#9e00ec 80% ); */
+  background: #f8cdcd;
+  animation: wave 8s ease-in-out infinite;
+  /* z-index: 1; */
+  position: relative;
 }
 
 
@@ -181,31 +219,38 @@ nav {
   /* z-index: 1; */
   position: relative;
 }
-.goodday{
+
+.goodday {
   font-family: 'Nunito', sans-serif;
 }
 
 @keyframes wave {
-    0%, 100% {
-        border-radius: 34% 66% 63% 37% / 31% 57% 43% 69%;
-    }
-    50%{
-        border-radius: 26% 74% 51% 49% / 22% 53% 47% 78%;
-    }
+
+  0%,
+  100% {
+    border-radius: 34% 66% 63% 37% / 31% 57% 43% 69%;
+  }
+
+  50% {
+    border-radius: 26% 74% 51% 49% / 22% 53% 47% 78%;
+  }
 }
 
 
 @keyframes wave3 {
-  0%, 100% {
-      border-radius: 66% 34% 37% 63% / 57% 31% 69% 43%;
+
+  0%,
+  100% {
+    border-radius: 66% 34% 37% 63% / 57% 31% 69% 43%;
   }
-  50%{
-      border-radius: 74% 26% 49% 51% / 53% 22% 78% 47%;
+
+  50% {
+    border-radius: 74% 26% 49% 51% / 53% 22% 78% 47%;
   }
 }
 
 
-body{
+body {
   background: #1f2532;
   background-color: #1f2532;
 }

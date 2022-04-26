@@ -176,9 +176,9 @@ body {
 	.loading-mask {
 		background: #292933;
 	}
-	.layer-4 {
+	/* .layer-4 {
 		background-image: url('./images/mask_large_dark.png');
-	}
+	} */
 }
 
 .cursor2 {

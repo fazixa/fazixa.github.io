@@ -83,15 +83,14 @@ window.onload = function() {
 			'image': mask_1,
 			'src': "./images/mask2.png",
 			'loaded': false
-		},{
-			'image': mask_1_dark,
-			'src': "./images/mask_large_dark.png",
-			'loaded': false
-		},{
-			'image': shadow_1,
-			'src': "./images/shadow.png",
-			'loaded': false
-		},{
+		}
+		// ,{
+		// 	'image': shadow_1,
+		// 	'src': "./images/shadow.png",
+		// 	'loaded': false
+		// }
+		,
+		{
 			'image': floaties_1,
 			'src': "./images/stroke.png",
 			'loaded': false

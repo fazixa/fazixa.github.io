@@ -176,7 +176,7 @@ body {
 @media (prefers-color-scheme: dark) {
 	body,
 	.loading-mask {
-		background: #292933;
+		background: transparent;
 	}
 	/* .layer-4 {
 		background-image: url('./images/mask_large_dark.png');

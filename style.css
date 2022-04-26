@@ -357,7 +357,7 @@ body {
 }
 @media (max-width: 580px) {
   .interactive-frame {
-    
+    width:300px;
     height: 400px;
   }
 }

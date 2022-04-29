@@ -478,7 +478,7 @@ body {
 }
 button{
     margin-top: 20px;
-    cursor: pointer;
+    /* cursor: pointer; */
     display: inline-block;
     position: relative;
     transition: 0.5s;

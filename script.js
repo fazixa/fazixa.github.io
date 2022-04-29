@@ -54,6 +54,7 @@ document.body.addEventListener("mousemove", evt => {
 
     for (let i = 0; i < $hoverables.length; i++) {
       $hoverables[i].addEventListener('mouseenter', onMouseHover);
+      // $hoverables[i].addEventListener('onmouseover', onMouseHover);
       $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
     }
 
@@ -76,6 +77,7 @@ document.body.addEventListener("mousemove", evt => {
 
 
 function onMouseHover(e) {
+  console.log("in");
   document.getElementById("cr").style.width = "35px";
   document.getElementById("cr").style.height = "35px";
   document.getElementById("cr").style.border = "15px solid #2128bd";
@@ -86,6 +88,7 @@ function onMouseHover(e) {
 }
 
 function onMouseHoverOut(e) {
+  console.log("out");
   document.getElementById("cr").style.width = "20px";
   document.getElementById("cr").style.height = "20px";
   document.getElementById("cr").style.border = "none";

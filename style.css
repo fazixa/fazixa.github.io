@@ -42,6 +42,10 @@ body {
     cursor: none;
   }
   
+  .hoverable{
+    cursor: pointer !important;
+    z-index: 100;
+  }
 
 /*--------------------------------------------------------------
 # Header
@@ -343,7 +347,7 @@ body {
     width:490px
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1111px) {
   .interactive-frame {
     
     height: 400px;
@@ -670,7 +674,7 @@ label {
     /* top: 50%;
     transform: translateY(-50%); */
     
-    height: 90vh;
+    height: 76vh;
     /* left: 50%; */
     z-index: 100;
     top: 50%; 
